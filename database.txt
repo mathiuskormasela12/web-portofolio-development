@@ -1,0 +1,41 @@
+1. Create webportofolio Database
+	 CREATE DATABASE webPortofolio CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+2. Create users Table
+	 CREATE TABLE users(
+			id int AUTO_INCREMENT UNIQUE NOT NULL,
+			full_name varchar(255) NOT NULL,
+			email varchar(255) NOT NULL UNIQUE,
+			password varchar(255) NOT NULL,
+			photo varchar(255) NOT NULL UNIQUE
+	 );
+
+3. Create portofolios Table
+	 CREATE TABLE portofolio(
+			id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			title varchar(255) NOT NULL,
+			description text NOT NULL,
+			photo varachar(255) NOT NULL UNIQUE
+	 );
+
+4. Create content Table
+	 CREATE TABLE content(
+			id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			title varchar(255) NOT NULL,
+			subtitle text NOT NULL
+	 );
+
+5. Create about Table
+	 CREATE TABLE about(
+			id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			text text NOT NULL
+		);
+
+6. Create skills Table
+	 CREATE TABLE skills (
+			id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+			skill varchar(255) NOT NULL,
+			level varchar(50) NOT NULL
+	 );
+
+
